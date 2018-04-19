@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("lzmadec", "for lzmadec support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("lzmadec", "enable lzmadec support", "no");
+
+if (PHP_LZMADEC != "no") {
+	EXTENSION("lzmadec", "lzmadec.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
